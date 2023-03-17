@@ -4,7 +4,7 @@ Shader "Pen Blit"
 {
     Properties
     {
-        _penColor("Color", Color) = (1,1,1,1)
+        _penColor("Color", Color) = (0,0,0,1)
         _start("Start", Vector) = (0,0,0,0)
         _end("End", Vector) = (0,0,0,0)
     }
@@ -60,7 +60,7 @@ Shader "Pen Blit"
                     return _penColor;
                 }
 
-                return fixed4(_penColor.rgb, 0.0);
+                return fixed4(1,1,1,0);
             }
             ENDCG
         }
